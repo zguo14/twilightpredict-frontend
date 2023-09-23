@@ -44,10 +44,13 @@ h1 {
 .app .search {
   text-align: center;
   padding: 1rem;
+  padding-top: 2%;
 }
 
 .app input {
   padding: .7rem 1.5rem;
+  width: 60%; /* 调整为您希望的宽度，这里我设置为80% */
+  max-width: 300px; /* 防止它变得太大 */
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(255,255,255, 0.8);
@@ -65,15 +68,32 @@ h1 {
   margin: auto;
   padding: 0 1rem;
   position: relative;
-  top: 10%;
+  top: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.app-title {
+  text-align: center;
+  font-size: 3rem;  /* 调整字体大小 */
+  padding-top: 11%;  /* 根据需要调整上边距 */
+}
+
 .app .top {
   width: 100%;
   margin: 1rem auto;
+}
+
+.top {
+  display: flex;     /* 使用flex布局 */
+  justify-content: space-between;  /* 左右内容之间留有空间 */
+  align-items: center; /* 垂直居中内容 */
+}
+
+.left-side, .right-side {
+  flex: 1;  /* 每侧占用相等的空间 */
+  padding: 0 1rem;  /* 根据需要增加内边距 */
 }
 
 .app .description {
@@ -97,11 +117,3 @@ h1 {
 .bold {
   font-weight: 700;
 }
-
-
-
-
-
-
-
-
