@@ -82,6 +82,7 @@ h1 {
 }
 
 .app-title {
+  color: #f0eae2f8;
   text-align: center;
   font-size: 3rem;  /* 调整字体大小 */
   padding-top: 13.5%;  /* 根据需要调整上边距 */
@@ -137,12 +138,13 @@ h1 {
 }
 
 .footer p {
+  color: #ffffffb5;
   margin: 0.5rem 0;
   font-size: 0.85rem;  /* reduce font size */
 }
 
 .footer a {
-  color: #fff;
+  color: #ffffffb5;
   text-decoration: none;
   margin: 0 0.5rem;
   font-size: 0.85rem;  /* reduce font size */
@@ -154,5 +156,45 @@ h1 {
 
 
 
+.help-icon {
+  position: fixed;  /* 使用 fixed 而不是 absolute */
+  top: 3%;
+  right: 3%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999; /* 为了确保它始终在其他内容的上面 */
+}
+.help-icon span {
+  color: #ffffff9a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: -21px; /* 调整这个值可以控制向下偏移的程度 */
+  right: 100%; /* 这样就会把tooltip放在help-icon的左边 */
+  transform: translateX(-10px); /* 这里的-10px会使其往左侧再偏移10px */
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffffc1;
+  padding: 10px 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  width: 190px; 
+  max-width: 500px;   
+  word-wrap: break-word;   
+
+}
+
+.help-icon:hover .tooltip {
+  display: block;
+}
 
 

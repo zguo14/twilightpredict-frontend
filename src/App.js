@@ -6,6 +6,7 @@ function App() {
   const [location, setLocation] = useState('')
   const [sunsetProbability, setSunsetProbability] = useState(null);
   const [sunsetDescription, setSunsetDescription] = useState(null);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=b51325554e1adbdfb37ec4cbed1dcfd5`
   const url = `https://twilightpredict.com/api/quality/${location}`
@@ -29,6 +30,18 @@ function App() {
       
       <div className="app-title">
         <h1>Sunset Predictor</h1> {/* 或其他您希望的标题 */}
+      </div>
+
+      {/* <div className="help-icon">
+        <span>?</span>
+        <div className="tooltip">这里是提示消息的内容。</div>
+      </div> */}
+
+      <div className="help-icon" 
+          onMouseEnter={() => setShowTooltip(true)} 
+          onMouseLeave={() => setShowTooltip(false)}>
+        <span>?</span>
+        {showTooltip && <div className="tooltip">The prediction is based on machine learning models.</div>}
       </div>
 
       <div className="search">
@@ -57,6 +70,7 @@ function App() {
                 <div className="sunset">
                   <h2>Sunset Quality Index</h2>
                   <h1 style={{ fontSize: '70px' }}>{`${Math.round(sunsetProbability * 100)}%`}</h1>
+
                   <h3>{sunsetDescription}</h3>
                 </div>
               )
