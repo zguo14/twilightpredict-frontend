@@ -16,14 +16,16 @@ function App() {
         setData(response.data.openWeatherResponse); // adjust to get the nested data
         setSunsetProbability(response.data.sunsetProbability);
         setSunsetDescription(response.data.sunsetDescription);
-        console.log(response.data);
+        // console.log(response.data);
       })
       setLocation('')
     }
   }
+
   
   return (
     <div className="app">
+      
       
       <div className="app-title">
         <h1>Sunset Predictor</h1> {/* 或其他您希望的标题 */}
@@ -38,6 +40,8 @@ function App() {
           type="text" />
       </div>
 
+
+
       <div className="container">
         <div className="top">
           <div className="left-side">
@@ -51,14 +55,18 @@ function App() {
             {
               sunsetProbability !== null && (
                 <div className="sunset">
-                  <h2>Sunset quality index:</h2>
-                  <h1 style={{ fontSize: '70px' }}>{`${(sunsetProbability * 100).toFixed(2)}%`}</h1>
+                  <h2>Sunset Quality Index</h2>
+                  <h1 style={{ fontSize: '70px' }}>{`${Math.round(sunsetProbability * 100)}%`}</h1>
                   <h3>{sunsetDescription}</h3>
                 </div>
               )
             } 
           </div>        
         </div>
+      </div>
+
+      <div className="footer">
+        <p>&copy; 2023 Sunset Predictor. All rights reserved.</p>
       </div>
 
     </div>

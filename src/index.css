@@ -24,7 +24,7 @@ h1 {
 
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-color: rgba(0,0,0,0.4);
   color: #fff;
@@ -32,7 +32,7 @@ h1 {
 
 .app:before {
   content: '';
-  background: url('./assets/sunset2.jpg') no-repeat center center/cover;
+  background: url('./assets/sunset3.jpg') no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -47,6 +47,9 @@ h1 {
   padding-top: 2%;
 }
 
+
+
+
 .app input {
   padding: .7rem 1.5rem;
   width: 60%; /* 调整为您希望的宽度，这里我设置为80% */
@@ -57,6 +60,10 @@ h1 {
   background: rgba(255,255,255, 0.1);
   color: #f8f8f8;
 }
+.app .search input::placeholder {
+  color: rgba(248, 248, 248, 0.5);
+}
+
 
 ::placeholder {
   color: #f8f8f8;
@@ -77,7 +84,7 @@ h1 {
 .app-title {
   text-align: center;
   font-size: 3rem;  /* 调整字体大小 */
-  padding-top: 11%;  /* 根据需要调整上边距 */
+  padding-top: 13.5%;  /* 根据需要调整上边距 */
 }
 
 .app .top {
@@ -117,3 +124,35 @@ h1 {
 .bold {
   font-weight: 700;
 }
+
+
+.footer {
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-top: 0px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.85rem;  /* reduce font size */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.85rem;  /* reduce font size */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
