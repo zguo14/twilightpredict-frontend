@@ -33,7 +33,7 @@ h1 {
 
 .app:before {
   content: '';
-  background: url('./assets/sunset3.jpg') no-repeat center center/cover;
+  background: url('./assets/sunset4.jpg') no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@ h1 {
   margin: auto;
   padding: 0 1rem;
   position: relative;
-  top: 4%;
+  top: 6%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,7 +66,7 @@ h1 {
 }
 
 .app-title {
-  color: #ffffffe4;
+  color: #ffffffd1;
   text-align: center;
   font-size: 3rem;  /* 调整字体大小 */
   padding-top: 13.5%;  /* 根据需要调整上边距 */
@@ -143,7 +143,7 @@ h1 {
 
 
 .help-icon {
-  position: fixed;  /* 使用 fixed 而不是 absolute */
+  position: absolute;  /* 使用 fixed 而不是 absolute */
   top: 3%;
   right: 3%;
   width: 30px;

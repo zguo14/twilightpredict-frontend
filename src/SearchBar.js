@@ -11,9 +11,9 @@ const SearchBar = ({ setCity, toggle }) => {
   };
 
   return (
-    <div className="search-bar">
+    <div className="search-bar" autocomplete="off">
       <div className="omrs-input-group">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autocomplete="off"> 
           <label className="omrs-input-underlined">
             <input
               type="text"
@@ -27,7 +27,7 @@ const SearchBar = ({ setCity, toggle }) => {
                   : "rgba(70, 70, 70, 0.3)",
               }}
             />
-            <span className="omrs-input-label">Location e.g. Toronto</span>
+            <span className="omrs-input-label" autocomplete="off">Location e.g. Toronto</span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"

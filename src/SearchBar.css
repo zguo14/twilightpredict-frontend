@@ -24,7 +24,7 @@
     margin-right: auto; /* 添加这一行 */
   }
   
-  input:-webkit-autofill,
+  /* input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
@@ -33,7 +33,7 @@
   
   input:autofill {
     background: var(--omrs-color-interaction-minus-two) !important;
-  }
+  } */
   
   /* Input*/
   .omrs-input-underlined > input,
@@ -49,7 +49,7 @@
     padding-top: 0.925rem;
     padding-bottom: 0.25rem;
     border-radius: 12px;  /* 这将设置一个5像素的圆角 */
-    color: #fff;
+    color: #ffffffd2;
   }
   
   .omrs-input-underlined > input:focus,
