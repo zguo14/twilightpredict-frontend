@@ -27,6 +27,7 @@ h1 {
   min-height: 100vh;
   position: relative;
   background-color: rgba(0,0,0,0.4);
+  align-items: center;
   color: #fff;
 }
 
@@ -41,28 +42,9 @@ h1 {
   z-index: -1;
 }
 
-.app .search {
-  text-align: center;
-  padding: 1rem;
-  padding-top: 2%;
-}
 
 
 
-
-.app input {
-  padding: .7rem 1.5rem;
-  width: 60%; /* 调整为您希望的宽度，这里我设置为80% */
-  max-width: 300px; /* 防止它变得太大 */
-  font-size: 1.2rem;
-  border-radius: 25px;
-  border: 1px solid rgba(255,255,255, 0.8);
-  background: rgba(255,255,255, 0.1);
-  color: #f8f8f8;
-}
-.app .search input::placeholder {
-  color: rgba(248, 248, 248, 0.5);
-}
 
 
 ::placeholder {
@@ -70,6 +52,7 @@ h1 {
 }
 
 .container {
+  color: #ffffffd1;
   max-width: 700px;
   height: 700px;
   margin: auto;
@@ -79,6 +62,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .app-title {
@@ -102,6 +86,8 @@ h1 {
 .left-side, .right-side {
   flex: 1;  /* 每侧占用相等的空间 */
   padding: 0 1rem;  /* 根据需要增加内边距 */
+
+  
 }
 
 .app .description {

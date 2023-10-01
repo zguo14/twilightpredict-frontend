@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import SearchBar from './SearchBar'; // 引入新的搜索框组件
+import './SearchBar.css';  // 也确保你有这个CSS文件
+
 function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
@@ -11,17 +14,27 @@ function App() {
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=b51325554e1adbdfb37ec4cbed1dcfd5`
   const url = `https://twilightpredict.com/api/quality/${location}`
   
-  const searchLocation = (event) => {
-    if (event.key === 'Enter') {
-      axios.get(url).then((response) => {
-        setData(response.data.openWeatherResponse); // adjust to get the nested data
-        setSunsetProbability(response.data.sunsetProbability);
-        setSunsetDescription(response.data.sunsetDescription);
-        // console.log(response.data);
-      })
-      setLocation('')
-    }
-  }
+  // const searchLocation = (event) => {
+  //   if (event.key === 'Enter') {
+  //     axios.get(url).then((response) => {
+  //       setData(response.data.openWeatherResponse); // adjust to get the nested data
+  //       setSunsetProbability(response.data.sunsetProbability);
+  //       setSunsetDescription(response.data.sunsetDescription);
+  //       // console.log(response.data);
+  //     })
+  //     setLocation('')
+  //   }
+  // }
+
+  // 更新这个函数来使用新的搜索框
+  const handleCityChange = (location) => {
+    const url = `https://twilightpredict.com/api/quality/${location}`;
+    axios.get(url).then((response) => {
+      setData(response.data.openWeatherResponse);
+      setSunsetProbability(response.data.sunsetProbability);
+      setSunsetDescription(response.data.sunsetDescription);
+    });
+  };
 
   
   return (
@@ -44,14 +57,18 @@ function App() {
         {showTooltip && <div className="tooltip">The prediction is based on machine learning models.</div>}
       </div>
 
-      <div className="search">
+      {/* <div className="search">
         <input
           value={location}
           onChange={event => setLocation(event.target.value)}
           onKeyPress={searchLocation}
           placeholder='Enter Location  e.g. Toronto'
           type="text" />
-      </div>
+      </div> */}
+      
+      <SearchBar setCity={handleCityChange} />
+      
+
 
 
 
