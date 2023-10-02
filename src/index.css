@@ -68,8 +68,11 @@ h1 {
 .app-title {
   color: #ffffffd1;
   text-align: center;
-  font-size: 3rem;  /* 调整字体大小 */
+  font-size: 6rem;  /* 调整字体大小 */
   padding-top: 13.5%;  /* 根据需要调整上边距 */
+  justify-content: center;
+  align-items: center;  /* 如果需要垂直居中 */
+  font-weight: 570; /* 添加这一行 */
 }
 
 .app .top {

@@ -20,8 +20,9 @@
     margin-bottom: auto;
     position: relative;
     width: 20.4375rem;
-    margin-left: auto;  /* 添加这一行 */
-    margin-right: auto; /* 添加这一行 */
+    
+    justify-content: center;
+    align-items: center;  /* 如果需要垂直居中 */
   }
   
   /* input:-webkit-autofill,

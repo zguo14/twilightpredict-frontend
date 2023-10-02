@@ -28,7 +28,7 @@ function App() {
       
       
       <div className="app-title">
-        <h1>Sunset Predictor</h1> {/* 或其他您希望的标题 */}
+        Sunset Predictor {/* 或其他您希望的标题 */}
       </div>
 
       <div className="help-icon" 
