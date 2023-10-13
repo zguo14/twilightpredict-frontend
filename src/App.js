@@ -10,8 +10,6 @@ function App() {
   const [sunsetDescription, setSunsetDescription] = useState(null);
   const [showTooltip, setShowTooltip] = useState(false);
 
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=b51325554e1adbdfb37ec4cbed1dcfd5`
-
   // Search
   const handleCityChange = (location) => {
     const url = `https://twilightpredict.com/api/quality/${location}`;
