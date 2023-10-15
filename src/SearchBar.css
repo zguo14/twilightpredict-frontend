@@ -25,17 +25,6 @@
     align-items: center;  /* 如果需要垂直居中 */
   }
   
-  /* input:-webkit-autofill,
-  textarea:-webkit-autofill,
-  select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
-    -webkit-text-fill-color: white !important;
-  }
-  
-  input:autofill {
-    background: var(--omrs-color-interaction-minus-two) !important;
-  } */
-  
   /* Input*/
   .omrs-input-underlined > input,
   .omrs-input-filled > input {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-import SearchBar from './SearchBar'; // 引入新的搜索框组件
-import './SearchBar.css';  // 也确保你有这个CSS文件
+import SearchBar from './SearchBar'; 
+import './SearchBar.css'; 
 
 function App() {
   const [data, setData] = useState({})
